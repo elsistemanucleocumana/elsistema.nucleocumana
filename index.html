@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sistema - Núcleo Cumaná</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo" onclick="showSection('bienvenida', event)" style="cursor: pointer; transition: 0.3s; display: flex; align-items: center;"
+        onmouseover="this.style.color='var(--acento)'" onmouseout="this.style.color='var(--blanco)'">
+        <img src="logo barra.jpg" alt="Logo Barra" style="height: 70px; margin-right: 15px; display: block;">
+        NÚCLEO CUMANÁ
+    </div>
+    <div class="menu-toggle" onclick="document.getElementById('nav-ul').classList.toggle('show')">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+   
+    <ul id="nav-ul">
+       
+        <li>
+            
+            <span class="nav-item-title">Inicio</span>
+            <ul class="dropdown">
+                <li><span class="nav-link active" onclick="showSection('bienvenida', event)">Bienvenida</span></li>
+                <li><span class="nav-link" onclick="showSection('galeria', event)">Galería</span></li>
+                <li><span class="nav-link" onclick="showSection('noticias-eventos', event)">Noticias y Eventos</span></li>
+            </ul>
+        </li>
+        <li>
+            <span class="nav-item-title">Institución</span>
+            <ul class="dropdown">
+                <li><span class="nav-link" onclick="showSection('historia', event)">Historia</span></li>
+                <li><span class="nav-link" onclick="showSection('mision-vision', event)">Misión y Visión</span></li>
+            </ul>
+        </li>
+        <li>
+            <span class="nav-item-title">Estructura Académica</span>
+            <ul class="dropdown">
+                <li><span class="nav-link" onclick="showSection('programas', event)">Programas</span></li>
+                <li><span class="nav-link" onclick="showSection('modulos', event)">Módulos</span></li>
+                <li><span class="nav-link" onclick="showSection('agrupaciones', event)">Agrupaciones</span></li>
+            </ul>
+        </li>
+        <li>
+            <span class="nav-item-title" onclick="showSection('tramites', event)">Trámites y Admisión</span>
+        </li>
+        <li>
+            <span class="nav-item-title" onclick="showSection('contacto', event)">Contacto</span>
+        </li>
+    </ul>
+</nav>
+
+<div class="content-area">
+    <section id="bienvenida" class="section active">
+        <div class="hero-hero">
+            <div class="hero-slides">
+                <div class="hero-slide active" style="background-image: url('18.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('17.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('14.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('12.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Bienvenidos</h1>
+                <h2 style="color: #ffffff; font-size: 3rem; letter-spacing: 0.05em;">El SISTEMA - NÚCLEO CUMANÁ</h2>
+            </div>
+            <!-- Controles del Carrusel -->
+            <div class="carousel-control prev" onclick="moveHeroSlide(-1)"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="carousel-control next" onclick="moveHeroSlide(1)"><i class="fa-solid fa-chevron-right"></i></div>
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="setHeroSlide(0)"></span>
+                <span class="indicator" onclick="setHeroSlide(1)"></span>
+                <span class="indicator" onclick="setHeroSlide(2)"></span>
+                <span class="indicator" onclick="setHeroSlide(3)"></span>
+            </div>
+        </div>
+        <div class="quote-section">
+            <blockquote class="hero-quote">
+                "La música es el arma más poderosa para que un niño, un joven, no se desvíe del camino correcto. No se trata de formar músicos, sino de formar ciudadanos."
+                <cite>— Maestro. José Antonio Abreu</cite>
+            </blockquote>
+        </div>
+
+        <!-- Sección de Experiencias y Testimonios -->
+        <div class="testimonios-section">
+            <span style="letter-spacing: 3px; color: var(--primario); font-weight: 800; margin-bottom: 18px; display: inline-block; text-transform: uppercase;">Voces del Núcleo</span>
+            <h2>Experiencias Vividas</h2>
+            <div class="title-decorator"></div>
+            
+            <div class="testimonios-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonio-card">
+                    <img src="10.jpg" alt="María Fernanda" class="testimonio-img">
+                    <p class="testimonio-quote">
+                        "El núcleo no es solo un lugar de clases de música; para mí se ha convertido en mi segundo hogar. Aquí aprendí que con disciplina, paciencia y trabajo en equipo, cualquier partitura por compleja que sea se puede lograr."
+                    </p>
+                    <h4 class="testimonio-author">María Fernanda</h4>
+                    <span class="testimonio-role">Violinista - Sinfónica Juvenil</span>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonio-card">
+                    <img src="8.jpg" alt="José Alejandro" class="testimonio-img">
+                    <p class="testimonio-quote">
+                        "Cantar en el coro me dio la confianza que necesitaba en mí mismo. Expresar mis emociones a través de la voz junto a mis compañeros es una sensación indescriptible. El Sistema me cambió la vida."
+                    </p>
+                    <h4 class="testimonio-author">José Alejandro</h4>
+                    <span class="testimonio-role">Corista - Coro Juvenil</span>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="testimonio-card">
+                    <img src="2.jpeg" alt="Gabriela Sofía" class="testimonio-img">
+                    <p class="testimonio-quote">
+                        "Tocar el cuatro venezolano y conectar con nuestras raíces tradicionales es un orgullo inmenso. El maestro siempre nos dice que cada nota que tocamos con amor construye un mejor ciudadano para el futuro."
+                    </p>
+                    <h4 class="testimonio-author">Gabriela Sofía</h4>
+                    <span class="testimonio-role">Cuatrista - Alma Llanera</span>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="galeria" class="section">
+            <div style="padding: 100px 8%; text-align: center;">
+                <h2>GALERÍA</h2>
+                <div class="title-decorator"></div>
+                <div class="grid-simple-9">
+                    <div class="caja-img"><img src="1.jpeg" alt="Galería"></div>
+                    <div class="caja-img"><img src="8.jpg" alt="Galería"></div>
+                    <div class="caja-img"><img src="4.jpg" alt="Galería"></div>
+                    <div class="caja-img"><img src="5.jpg" alt="Galería"></div>
+                    <div class="caja-img"><img src="6.jpg" alt="Galería"></div>
+                    <div class="caja-img"><img src="7.jpg" alt="Galería"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de trámites y admisión -->
+        <section id="tramites" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 100px 8%; text-align: center;">
+                <!-- Título de la sección -->
+                <h2>TRÁMITES Y ADMISIÓN</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+
+                <!-- Contenedor de trámites -->
+                <div class="tramites-container">
+                    <!-- Subtítulo de requisitos -->
+                    <h3 style="text-align: center; margin-bottom: 20px;">Requisitos de Inscripción</h3>
+                    <!-- Descripción de los requisitos -->
+                    <p style="text-align: center; margin-bottom: 40px;">Para formalizar tu inscripción en el Núcleo
+                        Cumaná, debes presentar los siguientes documentos en nuestra oficina:</p>
+
+                    <!-- Lista de requisitos -->
+                    <div class="requisitos-list">
+                        <!-- Requisito 1: Cédula -->
+                        <div class="requisito-card">
+                            <!-- Icono de cédula -->
+                            <i class="fa-solid fa-id-card"></i>
+                            <!-- Texto del requisito -->
+                            <p>Copia de cédula vigente del alumno y del representante (si es menor de edad).</p>
+                        </div>
+                        <!-- Requisito 2: Foto -->
+                        <div class="requisito-card">
+                            <!-- Icono de cámara -->
+                            <i class="fa-solid fa-camera-retro"></i>
+                            <!-- Texto del requisito -->
+                            <p>Foto tipo carnet del alumno y representante.</p>
+                        </div>
+                        <!-- Requisito 3: RIF -->
+                        <div class="requisito-card">
+                            <!-- Icono de archivo -->
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <!-- Texto del requisito -->
+                            <p>RIF actualizado del representante.</p>
+                        </div>
+                        <!-- Requisito 4: Carta de residencia -->
+                        <div class="requisito-card">
+                            <!-- Icono de casa -->
+                            <i class="fa-solid fa-house-user"></i>
+                            <!-- Texto del requisito -->
+                            <p>Carta de residencia emitida por el consejo comunal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de descarga de planilla -->
+                    <div class="descarga-card">
+                        <!-- Título de la tarjeta -->
+                        <h3>Planilla de Inscripción</h3>
+                        <!-- Descripción -->
+                        <p>Descarga, imprime y completa la planilla con tus datos.</p>
+                        <!-- Enlace de descarga -->
+                        <a href="PLANILLA DE INSCRIPCION_041219.pdf" download="Planilla_Inscripcion_Nucleo_Cumana.pdf"
+                            class="btn-dorado">
+                            <!-- Icono de descarga -->
+                            <i class="fa-solid fa-download" style="margin-right: 10px;"></i> Descargar Planilla
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de historia -->
+        <section id="historia" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 100px 8%; text-align: center;">
+                <!-- Título de la sección -->
+                <h2>HISTORIA</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+                <!-- Párrafo introductorio -->
+                <p style="max-width: 800px; margin: 0 auto 50px; font-size: 1.1rem; line-height: 1.8;">
+                    Impulsados por la visión del <strong>Mtro. Dr. José Antonio Abreu</strong> y guiados por la batuta
+                    del <strong>Mtro. Pastor Suárez</strong>, la alegría de la música llegó a las riberas del río
+                    Manzanares, esparciéndose por toda Cumaná para transformar vidas y construir un futuro de
+                    excelencia.
+                </p>
+
+                <!-- Grid de tarjetas de historia -->
+                <div class="history-grid">
+                    <!-- Tarjeta de historia 1 -->
+                    <div class="history-card">
+                        <!-- Año del evento -->
+                        <div class="h-year">Enero 1978</div>
+                        <!-- Título del evento -->
+                        <h3>Los Primeros Acordes</h3>
+                        <!-- Descripción del evento -->
+                        <p>El Mtro. José Antonio Abreu reúne a 150 aspirantes en el Palacio Episcopal de Cumaná,
+                            seleccionando a diez talentosos músicos para formarlos como los primeros guías de enseñanza
+                            del Estado Sucre.</p>
+                    </div>
+                    <!-- Tarjeta de historia 2 -->
+                    <div class="history-card">
+                        <!-- Año del evento -->
+                        <div class="h-year">13 de Marzo 1978</div>
+                        <!-- Título del evento -->
+                        <h3>Fundación del Núcleo</h3>
+                        <!-- Descripción del evento -->
+                        <p>Abre sus puertas el primer núcleo del Estado Sucre en la casa natal del poeta José Antonio
+                            Ramos Sucre, bajo la dirección fundadora del Mtro. Pastor Suárez.</p>
+                    </div>
+                    <!-- Tarjeta de historia 3 -->
+                    <div class="history-card">
+                        <!-- Año del evento -->
+                        <div class="h-year">1 de Diciembre 1996</div>
+                        <!-- Título del evento -->
+                        <h3>Nace la Orquesta Infantil</h3>
+                        <!-- Descripción del evento -->
+                        <p>El núcleo se expande con la creación de la Orquesta Infantil, sembrando la semilla de la
+                            música en las nuevas generaciones, bajo la dirección del Prof. Johnny Potella.</p>
+                    </div>
+                    <!-- Tarjeta de historia 4 -->
+                    <div class="history-card">
+                        <!-- Año del evento -->
+                        <div class="h-year">Actualidad</div>
+                        <!-- Título del evento -->
+                        <h3>Un Legado en Crecimiento</h3>
+                        <!-- Descripción del evento -->
+                        <p>Bajo la dirección del Maestro Johnny Potella Williams, el Núcleo Cumaná alberga a más de
+                            1.078 niños y jóvenes, proyectándose hacia nuevas iniciativas de rescate social.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTITUCIÓN -> MISIÓN Y VISIÓN -->
+        <section id="mision-vision" class="section">
+            <div class="wix-row">
+                <div class="wix-col-img"><img src="15.jpg" alt="Misión"></div>
+                <div class="wix-col-text bg-white">
+                    <h3>Nuestra Misión</h3>
+                    <p style="text-align: justify; font-size: 0.95rem;">El Sistema Nacional de Orquestas y Coros
+                        Juveniles e Infantiles de Venezuela constituye una obra social del Estado Venezolano consagrada
+                        al rescate pedagógico, ocupacional y ético de la infancia y la juventud, mediante la instrucción
+                        y la práctica colectiva de la música, dedicada a la capacitación, prevención y recuperación de
+                        los grupos más vulnerables del país, tanto por sus características etárias como por su situación
+                        socioeconómica.</p>
+                </div>
+            </div>
+            <div class="wix-row reverse">
+                <div class="wix-col-img"><img src="14.jpg" alt="Visión"></div>
+                <div class="wix-col-text bg-soft">
+                    <h3>Nuestra Visión</h3>
+                    <p style="text-align: justify; font-size: 0.95rem;">El Sistema Nacional de Orquestas y Coros
+                        Juveniles e Infantiles de Venezuela es una institución abierta a toda la sociedad, con un alto
+                        concepto de excelencia musical, que contribuye al desarrollo integral del ser humano. Se vincula
+                        con la comunidad a través del intercambio, la cooperación y el cultivo de valores
+                        transcendentales que inciden en la transformación del niño, el joven y el entorno familiar. Se
+                        cuenta con un recurso humano dirigido al logro de una meta común, con mística y gozo, formando
+                        equipos multidisciplinarios altamente motivados e identificados con la Institución.</p>
+                    <p style="text-align: justify; font-size: 0.95rem; margin-top: 15px;">Se reconoce al movimiento
+                        orquestal como una oportunidad para el desarrollo personal en lo intelectual, en lo espiritual,
+                        en lo social y en lo profesional, rescatando al niño y al joven de una juventud vacía,
+                        desorientada y desviada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de programas -->
+        <section id="programas" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 80px 5%; text-align: center;">
+                <!-- Título de la sección -->
+                <h2>PROGRAMAS</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+                <!-- Grid de tarjetas de programas -->
+                <div class="programs-grid">
+                    <!-- Tarjeta del programa académico orquestal -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img src="11.jpg" alt="Programa Académico Orquestal"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa Académico Orquestal</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-orquestal', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa de iniciación musical -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img
+                                src="PIM.jpg"
+                                alt="Programa de Iniciación Musical"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa de Iniciación Musical</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-iniciacion', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa de educación especial -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img
+                                src="educacion especial.jpg"
+                                alt="Programa de Educación Especial"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa de Educación Especial</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-especial', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa académico coral -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img src="13.jpg" alt="Programa Académico Coral"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa Académico Coral</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-coral', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa alma llanera -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img
+                                src="alma llanera.jpg"
+                                alt="Programa Alma Llanera"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa Alma Llanera</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-llanera', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa simón bolívar -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img
+                                src="simo bolivar.jpg"
+                                alt="Programa Simón Bolívar"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa Simón Bolívar</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-bolivar', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta del programa de música popular -->
+                    <div class="program-card">
+                        <!-- Imagen del programa -->
+                        <div class="card-img"><img
+                                src="musica popular.jpg"
+                                alt="Programa de Música Popular y otros Géneros"></div>
+                        <!-- Contenido de la tarjeta -->
+                        <div class="card-content">
+                            <!-- Título del programa -->
+                            <h3>Programa de Música Popular y otros Géneros</h3>
+                            <!-- Contenedor de botones -->
+                            <div class="badge-container" style="margin-top: 15px;">
+                                <!-- Botón para leer más -->
+                                <button class="btn-wix" style="width: 100%;"
+                                    onclick="showSection('detalle-popular', event)">Leer más</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETALLES DE PROGRAMAS -->
+        <section id="detalle-orquestal" class="section">
+            <div class="wix-row">
+                <div class="wix-col-img"><img src="11.jpg" alt="Programa Académico Orquestal"></div>
+                <div class="wix-col-text bg-white" style="border-top: 5px solid #8A1538;">
+                    <h3 style="color: #8A1538; font-size: 2rem;">Programa Académico Orquestal</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Basado en un proceso de
+                        enseñanza-aprendizaje de la práctica colectiva e individual de la música, está dirigido a niños
+                        y jóvenes guiados por docentes y directores que, además de enseñar música, forman a sus
+                        estudiantes de manera integral con principios de igualdad, respeto, solidaridad, compromiso,
+                        responsabilidad, trabajo en equipo y cultura de paz.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(138, 21, 56, 0.1); color: #8A1538; border: 1px solid rgba(138, 21, 56, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            209 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #8A1538; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle-iniciacion" class="section">
+            <div class="wix-row reverse">
+                <div class="wix-col-img"><img
+                        src="PIM.jpg"
+                        alt="Programa de Iniciación Musical"></div>
+                <div class="wix-col-text bg-soft" style="border-top: 5px solid #8B5CF6;">
+                    <h3 style="color: #8B5CF6; font-size: 2rem;">Programa de Iniciación Musical</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Este programa favorece el
+                        acercamiento directo de niños, jóvenes y adultos al mundo orquestal y coral, respetando su fase
+                        cognitivo-emocional y contribuyendo con su desarrollo de manera integral.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(139, 92, 246, 0.1); color: #8B5CF6; border: 1px solid rgba(139, 92, 246, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            250 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #8B5CF6; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle-especial" class="section">
+            <div class="wix-row">
+                <div class="wix-col-img"><img
+                        src="educacion especial.jpg"
+                        alt="Programa de Educación Especial"></div>
+                <div class="wix-col-text bg-white" style="border-top: 5px solid #D9008D;">
+                    <h3 style="color: #D9008D; font-size: 2rem;">Programa de Educación Especial</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Componente Académico
+                        Organizacional de El Sistema Nacional de Orquestas y Coros Juveniles e Infantiles de Venezuela
+                        “El Sistema”, que enmarcado en su modelo máximo de Inclusión, Participación y Rescate Social,
+                        promueve el desarrollo sistemático y permanente de la “Práctica Orquestal y Coral” de los niños
+                        y jóvenes con necesidades educativas especiales y/o discapacidad, a través de estructuras y
+                        mecanismos académicos de formación, fundamentados en los principios metodológicos de la
+                        “Práctica Colectiva de la Música”.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(217, 0, 141, 0.1); color: #D9008D; border: 1px solid rgba(217, 0, 141, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            66 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #D9008D; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle-coral" class="section">
+            <div class="wix-row reverse">
+                <div class="wix-col-img"><img src="13.jpg" alt="Programa Académico Coral"></div>
+                <div class="wix-col-text bg-soft" style="border-top: 5px solid #84CC16;">
+                    <h3 style="color: #84CC16; font-size: 2rem;">Programa Académico Coral</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Tras el reconocimiento de la
+                        tradición de la práctica coral en el país y el fácil acceso en las comunidades, escuelas e
+                        instituciones, El Sistema impulsa la creación del Programa Académico Coral; promoviendo la
+                        incorporación de niños y jóvenes que, usando la voz como instrumento, se les abre una gama de
+                        posibilidades de desarrollo individual y colectivo, contribuyendo con su crecimiento artístico,
+                        humanístico e intelectual.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(132, 204, 22, 0.1); color: #84CC16; border: 1px solid rgba(132, 204, 22, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            130 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #84CC16; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle-llanera" class="section">
+            <div class="wix-row">
+                <div class="wix-col-img"><img src="alma llanera.jpg" alt="Programa Alma Llanera"></div>
+                <div class="wix-col-text bg-white" style="border-top: 5px solid #EAB308;">
+                    <h3 style="color: #EAB308; font-size: 2rem;">Programa Alma Llanera</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Este programa enaltece los
+                        valores culturales autóctonos del país y da a conocer las costumbres propias de las regiones,
+                        por medio de la ejecución de instrumentos típicos. Cuenta con la valiosa participación de
+                        cultores que, junto a los docentes de El Sistema, profundizan en las estrategias de
+                        enseñanza-aprendizaje de la música venezolana, lectura de partituras y promoción del enorme
+                        bagaje cultural con el que cuenta nuestra nación.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(234, 179, 8, 0.1); color: #EAB308; border: 1px solid rgba(234, 179, 8, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            153 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #EAB308; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle-bolivar" class="section">
+            <div class="wix-row reverse">
+                <div class="wix-col-img"><img
+                        src="simo bolivar.jpg"
+                        alt="Programa Simón Bolívar"></div>
+                <div class="wix-col-text bg-soft" style="border-top: 5px solid #FF5E00;">
+                    <h3 style="color: #FF5E00; font-size: 2rem;">Programa Simón Bolívar</h3>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Con el objetivo de masificar el
+                        milagro de la música y expandir el impacto social de El Sistema, en 2015 nació este programa
+                        dirigido principalmente a fomentar la práctica colectiva de la música en las escuelas
+                        pertenecientes al subsistema de educación básica de nuestro país, con el propósito de que esta
+                        población aprenda las bondades de la música y los valores que se desprenden de ella.</p>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 15px;">A través de los módulos en las escuelas, la música orienta y direcciona las etapas más importantes en la vida de los niños y une a la población escolar formal con la práctica colectiva sinfónico-coral.</p>
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 15px;">Este modelo de formación pedagógico-musical se imparte en cientos de escuelas y liceos del país, donde los profesores de El Sistema hacen del trabajo en equipo, la tolerancia y el respeto, un ejercicio cotidiano en la convivencia de los estudiantes.</p>
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(255, 94, 0, 0.1); color: #FF5E00; border: 1px solid rgba(255, 94, 0, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            33.850 Integrantes</span>
+                    </div>
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #FF5E00; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de detalle del programa de música popular -->
+        <section id="detalle-popular" class="section">
+            <!-- Contenedor en fila con imagen y texto -->
+            <div class="wix-row">
+                <!-- Columna de imagen -->
+                <div class="wix-col-img"><img
+                        src="musica popular.jpg"
+                        alt="Programa de Música Popular y otros Géneros"></div>
+                <!-- Columna de texto con fondo blanco -->
+                <div class="wix-col-text bg-white" style="border-top: 5px solid #E3001B;">
+                    <!-- Título del programa -->
+                    <h3 style="color: #E3001B; font-size: 2rem;">Programa de Música Popular y otros Géneros</h3>
+                    <!-- Descripción del programa -->
+                    <p style="text-align: justify; font-size: 1rem; margin-top: 20px;">Este es uno de los grandes
+                        alcances desde el punto de vista musical y académico de la institución, al ofrecer expansión y
+                        proyección a una amplia gama de ritmos y géneros. Contribuye con la consolidación de bandas de
+                        jazz, rock sinfónico, música afroamericana, latinoamericana y caribeña.</p>
+                    <!-- Número de integrantes -->
+                    <div style="margin: 20px 0;">
+                        <span
+                            style="background: rgba(227, 0, 27, 0.1); color: #E3001B; border: 1px solid rgba(227, 0, 27, 0.2); padding: 8px 16px; border-radius: 50px; font-weight: 700;">•
+                            122 Integrantes</span>
+                    </div>
+                    <!-- Botón para volver a programas -->
+                    <button class="btn-wix" onclick="showSection('programas', event)"
+                        style="background: #E3001B; align-self: flex-start; margin-top: 30px;"><i
+                            class="fa-solid fa-arrow-left"></i> Volver a Programas</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de módulos -->
+        <section id="modulos" class="section">
+            <!-- Contenedor centrado sin imagen -->
+            <div style="padding: 100px 8%; text-align: center;">
+                <span style="letter-spacing: 3px; color: var(--primario); font-weight: 800; margin-bottom: 18px; display: inline-block;">MÓDULOS CERTIFICADOS</span>
+                <h2>Módulos certificados en el Núcleo Cumaná</h2>
+                <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem; line-height: 1.8;">
+                    61 instituciones educativas y fundaciones participan en el Programa Simón Bolívar (PSB), llevando la educación musical directamente a las escuelas y liceos de la región.
+                </p>
+                <div class="modulos-badge" style="margin-bottom: 40px;">61 instituciones certificadas</div>
+
+                <div class="modulos-definicion" style="margin-bottom: 50px;">
+                    <h3>¿Qué es un Módulo?</h3>
+                    <p>Un módulo es una unidad independiente que forma parte de un conjunto mayor, utilizada para estructurar, organizar o medir en diversos campos. En El Sistema de Orquestas, un módulo P.S.B. (Programa Simón Bolívar) es la unidad donde un formador lleva educación musical a las diferentes instituciones participantes.</p>
+                    <p>Los «Módulos» del PSB son las escuelas, liceos y centros educativos donde los profesores de El Sistema imparten enseñanza musical de manera regular y sistemática.</p>
+                </div>
+
+                <div class="modulos-puntos">
+                    <div class="modulo-card">
+                        <h4>Objetivo</h4>
+                        <p>Masificar la práctica musical y transmitir valores ciudadanos como trabajo en equipo, tolerancia y respeto en el entorno escolar.</p>
+                    </div>
+                    <div class="modulo-card">
+                        <h4>Alcance</h4>
+                        <p>Funciona en cientos de escuelas y liceos del país. En Cumaná atiende a más de 34.429 niños en 61 escuelas y fundaciones.</p>
+                    </div>
+                    <div class="modulo-card">
+                        <h4>Enseñanza</h4>
+                        <p>Se imparte práctica coral, lenguaje musical y ejecución de instrumentos, con especial énfasis en el cuatro venezolano.</p>
+                    </div>
+                    <div class="modulo-card">
+                        <h4>Integración</h4>
+                        <p>El PSB forma parte de la estructura pedagógica de El Sistema, sumando sus actividades a las de los núcleos tradicionales y facilitando acceso sin audiciones previas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de agrupaciones -->
+        <section id="agrupaciones" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 100px 8%; text-align: center;">
+                <!-- Subtítulo -->
+                <p style="letter-spacing: 3px; color: var(--primario); font-weight: 800; margin-bottom: 20px;">NUESTRO
+                    TALENTO</p>
+                <!-- Título de la sección -->
+                <h2>AGRUPACIONES</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+
+                <!-- Grid de agrupaciones -->
+                <div class="agrupaciones-grid">
+                    <!-- Tarjeta de orquesta sinfónica pre infantil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="pre.jpg" alt="ORQUESTA SINFONICA PRE INFANTIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>ORQUESTA SINFÓNICA PRE INFANTIL</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de orquesta sinfónica infantil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="infantil.jpg" alt="ORQUESTA SINFONICA INFANTIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>ORQUESTA SINFÓNICA INFANTIL</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de orquesta sinfónica juvenil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="17.jpg" alt="ORQUESTA SINFONICA JUVENIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>ORQUESTA SINFÓNICA JUVENIL</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de coro sinfónico infantil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="coro infantil.jpg" alt="CORO SINFÓNICO INFANTIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>CORO SINFÓNICO: MIRIAM WILLIAMS</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de coro sinfónico juvenil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="coro juvenil.jpg" alt="CORO SINFÓNICO JUVENIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>CORO SINFÓNICO: LUIS EDUARDO JIMÉNEZ</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de coro fiam -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="10.jpg" alt="CORO FIAM">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>CORO FIAM</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de orquesta alma llanera infantil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="2.jpeg" alt="ORQUESTA ALMA LLANERA INFANTIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>ORQUESTA ALMA LLANERA: MOROCHITO FUENTES</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de orquesta alma llanera juvenil -->
+                    <div class="agrupacion-card">
+                        <!-- Contenedor de imagen -->
+                        <div class="agrupacion-img-container">
+                            <!-- Imagen de la agrupación -->
+                            <img src="alma llanera agrupacion.png" alt="ORQUESTA ALMA LLANERA JUVENIL">
+                        </div>
+                        <!-- Información de la agrupación -->
+                        <div class="agrupacion-info">
+                            <!-- Nombre de la agrupación -->
+                            <h4>ORQUESTA ALMA LLANERA: MARIA RODRIGUEZ</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contacto unificada -->
+        <section id="contacto" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 100px 8% 40px; text-align: center;">
+                <!-- Título de la sección -->
+                <h2>DIRECCIÓN Y CONTACTO</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+
+                <!-- Grid de información de contacto -->
+                <div class="contacto-grid">
+                    <!-- Item de ubicación -->
+                    <div class="contacto-item">
+                        <!-- Icono de ubicación -->
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <!-- Título del item -->
+                        <h3>Ubicación</h3>
+                        <!-- Descripción -->
+                        <p>Concha Acústica del Parque Guaiquerí, Cumaná - Estado Sucre.</p>
+                    </div>
+                    <!-- Item de teléfono -->
+                    <div class="contacto-item">
+                        <!-- Icono de teléfono -->
+                        <i class="fa-solid fa-phone"></i>
+                        <!-- Título del item -->
+                        <h3>Teléfono</h3>
+                        <!-- Descripción -->
+                        <p>+58 293 123 4567<br>Lunes a Viernes, 8am - 5pm</p>
+                    </div>
+                    <!-- Item de correo -->
+                    <div class="contacto-item">
+                        <!-- Icono de correo -->
+                        <i class="fa-solid fa-envelope"></i>
+                        <!-- Título del item -->
+                        <h3>Correo</h3>
+                        <!-- Descripción -->
+                        <p>info@nucleocumana.org</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenedor con padding, centrado y fondo oscuro (Redes Sociales) -->
+            <div style="padding: 60px 8% 100px; text-align: center; background-color: var(--oscuro); color: var(--blanco);">
+                <!-- Título de la sección -->
+                <h2 style="color: var(--blanco);">SÍGUENOS EN NUESTRAS REDES</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+                <!-- Descripción -->
+                <p style="color: #ccc;">Mantente al día con nuestros conciertos, audiciones y noticias destacadas.</p>
+
+                <!-- Enlaces a redes sociales -->
+                <div class="social-links">
+                    <!-- Enlace a Instagram -->
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- Enlace a Facebook -->
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de noticias y eventos -->
+        <section id="noticias-eventos" class="section">
+            <!-- Contenedor con padding y centrado -->
+            <div style="padding: 100px 8%; text-align: center;">
+                <!-- Título de la sección -->
+                <h2>NOTICIAS Y EVENTOS</h2>
+                <!-- Decorador de título -->
+                <div class="title-decorator"></div>
+                <!-- Texto introductorio -->
+                <p style="max-width: 850px; margin: 0 auto 40px; font-size: 1.05rem; color: #444;">
+                    Entérate de las novedades del Núcleo Cumaná y acompáñanos en los próximos conciertos, talleres y actividades culturales.
+                </p>
+
+                <!-- Grid de noticias y eventos -->
+                <div class="noticias-grid">
+                    <article class="evento-card">
+                        <div class="evento-img">
+                            <img src="1.jpeg" alt="Convocatoria abierta al núcleo">
+                        </div>
+                        <div class="evento-info">
+                            <span class="evento-badge">Noticias</span>
+                            <h3>Convocatoria abierta para nuevos aspirantes</h3>
+                            <p>Fechas de audición, reconocimientos recientes y oportunidades para integrar a nuevos niños y jóvenes.</p>
+                        </div>
+                    </article>
+                    <article class="evento-card">
+                        <div class="evento-img">
+                            <img src="8.jpg" alt="Concierto juvenil">
+                        </div>
+                        <div class="evento-info">
+                            <span class="evento-badge">Evento</span>
+                            <h3>Concierto juvenil en el Parque Guaiquerí</h3>
+                            <p>Disfruta de un recital con nuestras agrupaciones infantiles y juveniles, promoviendo la cultura musical en Cumaná.</p>
+                        </div>
+                    </article>
+                    <article class="evento-card">
+                        <div class="evento-img">
+                            <img src="4.jpg" alt="Taller musical gratuito">
+                        </div>
+                        <div class="evento-info">
+                            <span class="evento-badge">Taller</span>
+                            <h3>Taller de formación musical gratuita</h3>
+                            <p>Actividades abiertas para estudiantes y familias, con práctica coral, teoría musical y ejecución de instrumentos.</p>
+                        </div>
+                    </article>
+                    <article class="evento-card">
+                        <div class="evento-img">
+                            <img src="10.jpg" alt="Entrega de instrumentos">
+                        </div>
+                        <div class="evento-info">
+                            <span class="evento-badge">Comunidad</span>
+                            <h3>Entrega de instrumentos y reconocimiento</h3>
+                            <p>Celebramos a los participantes destacados y reforzamos el acceso a la música en escuelas del núcleo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Texto de copyright -->
+        <p>&copy; 2026 Núcleo Cumaná | El Sistema Nacional de Orquestas</p>
+    </footer>
+
+    <!-- Botón flotante para volver arriba -->
+    <div id="btn-volver-arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        style="position: fixed; bottom: 30px; right: 30px; background: var(--primario); color: var(--blanco); width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: var(--sombra-fuerte); z-index: 1000; transition: all 0.3s ease; opacity: 0; pointer-events: none; font-size: 1.2rem;">
+        <!-- Icono de flecha hacia arriba -->
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Script JavaScript para funcionalidad de la página -->
+    <script>
+        // Funcionalidad del Carrusel de Bienvenida (Hero Section)
+        let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroIndicators = document.querySelectorAll('.indicator');
+        let heroCarouselInterval;
+
+        function showHeroSlide(index) {
+            if (!heroSlides.length) return;
+            if (index >= heroSlides.length) {
+                currentHeroSlide = 0;
+            } else if (index < 0) {
+                currentHeroSlide = heroSlides.length - 1;
+            } else {
+                currentHeroSlide = index;
+            }
+
+            heroSlides.forEach((slide, idx) => {
+                if (idx === currentHeroSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            heroIndicators.forEach((indicator, idx) => {
+                if (idx === currentHeroSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        function moveHeroSlide(step) {
+            showHeroSlide(currentHeroSlide + step);
+            resetHeroCarouselTimer();
+        }
+
+        function setHeroSlide(index) {
+            showHeroSlide(index);
+            resetHeroCarouselTimer();
+        }
+
+        function startHeroCarouselTimer() {
+            heroCarouselInterval = setInterval(() => {
+                showHeroSlide(currentHeroSlide + 1);
+            }, 5000);
+        }
+
+        function resetHeroCarouselTimer() {
+            clearInterval(heroCarouselInterval);
+            startHeroCarouselTimer();
+        }
+
+        startHeroCarouselTimer();
+
+        // Función para mostrar una sección específica
+        function showSection(sectionId, e) {
+            // Prevenir el comportamiento por defecto si es un enlace
+            if (e) e.preventDefault();
+
+            // Ocultar todas las secciones removiendo la clase 'active'
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            // Desactivar todos los enlaces de navegación
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+
+            // Mostrar la sección seleccionada agregando la clase 'active'
+            document.getElementById(sectionId).classList.add('active');
+
+            // Activar el enlace correspondiente si fue clicado
+            if (e && e.target.classList.contains('nav-link')) {
+                e.target.classList.add('active');
+            }
+
+            // Ocultar el menú móvil si está abierto
+            document.getElementById('nav-ul').classList.remove('show');
+
+            // Desplazar la página hacia arriba suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Event listener para los títulos de navegación en móvil
+        document.querySelectorAll('.nav-item-title').forEach(title => {
+            title.addEventListener('click', function (e) {
+                // Solo en dispositivos móviles (ancho <= 768px) y si el elemento li contiene un dropdown
+                if (window.innerWidth <= 768 && this.parentElement.querySelector('.dropdown')) {
+                    // Obtener el elemento padre (li)
+                    const li = this.parentElement;
+                    // Verificar si ya está abierto
+                    const isOpen = li.classList.contains('mobile-open');
+                    
+                    // Cerrar otros submenús abiertos
+                    document.querySelectorAll('.navbar ul li').forEach(item => item.classList.remove('mobile-open'));
+                    
+                    // Si no estaba abierto, abrirlo
+                    if (!isOpen) {
+                        li.classList.add('mobile-open');
+                    }
+                }
+            });
+        });
+
+        // Event listener para el botón flotante de volver arriba
+        window.addEventListener('scroll', function () {
+            // Obtener el botón
+            const btn = document.getElementById('btn-volver-arriba');
+            // Si el scroll es mayor a 300px, mostrar el botón
+            if (window.scrollY > 300) {
+                btn.style.opacity = '1';
+                btn.style.pointerEvents = 'auto';
+                btn.style.transform = 'translateY(0)';
+            } else {
+                // Ocultar el botón
+                btn.style.opacity = '0';
+                btn.style.pointerEvents = 'none';
+                btn.style.transform = 'translateY(10px)';
+            }
+        });
+    </script>
+</body>
+
+</html>

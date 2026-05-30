@@ -1,0 +1,14 @@
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Folder config file
+[Dd]esktop.ini
+
+# Directory-based project folders
+.idea/
+.vscode/
+*.suo
+*.user
+*.log
