@@ -1176,7 +1176,7 @@ p {
 /* Estilos para h3 en la séptima tarjeta */
 .program-card:nth-child(7) .card-content h3 {
     /* Color rojo */
-    color: #E3001B;
+    color: #D9008D;
 }
 
 /* Estilos para stats-badge en la séptima tarjeta */
@@ -1397,7 +1397,10 @@ p {
 }
 
 /* Estilos para tarjeta de agrupación */
-.agrupacion-card {
+.agrupaciones-grid .agrupacion-card {
+  height: 100%;
+  min-height: 350px; /* Ensure uniform height */
+}
     /* Fondo blanco */
     background: var(--blanco);
     /* Oculta desbordamiento */
@@ -1422,6 +1425,14 @@ p {
     transform: translateY(-10px);
     /* Sombra fuerte */
     box-shadow: var(--sombra-fuerte);
+}
+
+/* Ensure cards have equal height and stretch across grid */
+.agrupacion-grid {
+    align-items: stretch;
+}
+.agrupacion-card {
+    height: 100%;
 }
 
 /* Estilos para contenedor de imagen de agrupación */
@@ -1455,7 +1466,7 @@ p {
 /* Estilos para info de agrupación */
 .agrupacion-info {
     /* Fondo azul institucional */
-    background: #004b7a;
+    background: #8A1538;
     /* Padding 20px arriba/abajo, 15px izquierda/derecha */
     padding: 20px 15px;
     /* Alineación center */
@@ -1487,6 +1498,43 @@ p {
     /* Altura línea 1.4 */
     line-height: 1.4;
 }
+
+/* --- PROGRAM COLORS AND STYLES --- */
+:root {
+  --orquestal: #8A1538; /* deep blue */
+  --coral: #84CC16;   /* ruby red */
+  --llanera: #EAB308; /* teal */
+  --especial: #D9008D; /* purple */
+  --popular: #E3001B;  /* amber */
+}
+
+/* Title colors for program headings */
+.color-orquestal { color: var(--orquestal); }
+.color-coral { color: var(--coral); }
+.color-llanera { color: var(--llanera); }
+.color-especial { color: var(--especial); }
+.color-popular { color: var(--popular); }
+
+/* Badge tag base style */
+.agrupacion-badge-tag {
+  display: none;
+}
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+
+/* Background colors for badges and info sections */
+.bg-orquestal, .agrupacion-card.orquestal .agrupacion-badge-tag, .agrupacion-card.orquestal .agrupacion-info { background: var(--orquestal); }
+.bg-coral, .agrupacion-card.coral .agrupacion-badge-tag, .agrupacion-card.coral .agrupacion-info { background: var(--coral); }
+.bg-llanera, .agrupacion-card.llanera .agrupacion-badge-tag, .agrupacion-card.llanera .agrupacion-info { background: var(--llanera); }
+.bg-especial, .agrupacion-card.especial .agrupacion-badge-tag, .agrupacion-card.especial .agrupacion-info { background: var(--especial); }
+.bg-popular, .agrupacion-card.popular .agrupacion-badge-tag, .agrupacion-card.popular .agrupacion-info { background: var(--popular); }
+
+/* Spacing for each program container */
+.agrupaciones-programa-container { margin-bottom: 60px; }
 
 
 /* --- TRÁMITES Y ADMISIÓN --- */
@@ -1746,9 +1794,7 @@ p {
     color: var(--primario);
     /* Margen bottom 20px */
     margin-bottom: 20px;
-}
-
-/* --- NOTICIAS Y EVENTOS --- */
+}/* --- NOTICIAS Y EVENTOS --- */
 .noticias-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1816,6 +1862,9 @@ p {
     color: #4f4f4f;
     line-height: 1.75;
 }
+
+
+
 
 /* Estilos para enlaces sociales */
 .social-links {
